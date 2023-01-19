@@ -21,7 +21,8 @@ piece of work is entirely of my own creation.
 #include <iostream>
 #include "Movie.h"
 using namespace std;
-// using namespace sdds;
+using namespace ssd;
+
 void flushkeys();
 bool yes();
 
