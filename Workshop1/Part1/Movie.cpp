@@ -24,6 +24,7 @@ piece of work is entirely of my own creation.
 #include "File.h"
 using namespace std;
 
+namespace ssd{
 Movie movies[50];
 
 bool loadMovies() {
@@ -81,4 +82,5 @@ void displayMoviesWithGenre(const char genre[]) {
    if (j == 1) {
       cout << "No match found for: " << genre << endl;
    }
+}
 }
