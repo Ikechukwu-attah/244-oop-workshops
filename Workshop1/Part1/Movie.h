@@ -17,9 +17,7 @@ piece of work is entirely of my own creation.
 #ifndef MOVIE_LIST
 #define MOVIE_LIST
 
-
-
-struct Movie {
+namespace ssd{struct Movie {
    char m_title[128];
    int m_year;
    char m_rating[6];
@@ -32,6 +30,8 @@ struct Movie {
 bool loadMovies();
 bool hasGenre(const Movie* mvp, const char genre[]);
 void displayMovie(const Movie* mvp);
-void displayMoviesWithGenre(const char genre[]);
+void displayMoviesWithGenre(const char genre[]);}
+
+
 
 #endif // !1
