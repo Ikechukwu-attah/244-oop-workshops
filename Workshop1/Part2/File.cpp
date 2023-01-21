@@ -13,3 +13,19 @@ piece of work is entirely of my own creation.
 
 
  */
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <cstring>
+#include <cstdio>
+#include "File.h"
+using namespace std;
+
+
+FILE* fptr;       
+
+// opens the data file and returns true if successful
+bool gpaQuery(const char *filename){
+    fptr = fopen(filename, "r");
+     return fptr != NULL;
+}

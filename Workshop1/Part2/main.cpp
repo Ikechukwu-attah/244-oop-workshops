@@ -17,6 +17,8 @@ piece of work is entirely of my own creation.
 
 #include <iostream>
 #include "GPAlist.h"
+#include "File.h"
+#include "File.cpp"
  using namespace std;
  int main()
  {
@@ -28,6 +30,7 @@ piece of work is entirely of my own creation.
      {
          cout << "failed!, this is the correct exectution" << std::endl;
      }
+     
      if (!gpaQuery("students.csv"))
      {
          std::cout << "This should have worked, fix the problem!" << std::endl;

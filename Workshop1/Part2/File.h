@@ -13,3 +13,12 @@ piece of work is entirely of my own creation.
 
 
  */
+
+#ifndef SDDS_FILE_H
+#define SDDS_FILE_H
+
+
+
+bool gpaQuery(const char *filename);
+
+#endif // !SDDS_GPALIST_H

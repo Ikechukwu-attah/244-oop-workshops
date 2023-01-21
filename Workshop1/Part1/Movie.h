@@ -4,7 +4,7 @@
 Full Name : ATTAH IKECHUKWU ANTHONY
 Student ID#: 175441211
 Email : iattah@myseneca.ca
-Section : PART-1
+Section : NFF
 Authenticity Declaration:
 I declare this submission is the result of my own work and has not been
 shared with any other student or 3rd party content provider. This submitted
