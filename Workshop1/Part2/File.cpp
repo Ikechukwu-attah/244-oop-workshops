@@ -50,3 +50,7 @@ bool readStudentNumber(int *num){
 bool readStudentGpa(double *gpa){
    return fscanf(fptr, "%lf\n", gpa)==1;
 }
+
+void flushkeys() {
+   while (cin.get() != '\n');
+}

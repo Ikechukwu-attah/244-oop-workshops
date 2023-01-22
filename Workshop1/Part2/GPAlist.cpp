@@ -35,18 +35,21 @@ piece of work is entirely of my own creation.
  GPA gpaValue[100];
  bool loadStudent()
  {
+      
       GPA gpa;
       int studentNumber = 0;
-      bool ok = 0;
+      bool ok = true;
       if(openFile("students.csv")){
+      
         while(ok && studentNumber < 100){
             ok = readStudentName(gpa.name) && readStudentNumber(&gpa.stno) && readStudentGpa(&gpa.gpa);
-
-            if(ok)
-                gpaValue[studentNumber++] = gpa;
+      
+            if (ok)
+                 gpaValue[studentNumber++] = gpa;
         }
          closeFile();
       }
+      
       return studentNumber == 100;
  }
 
@@ -61,7 +64,7 @@ void displayStudent(const char operation, const double value){
          {
             if (gpaValue[i].gpa > value && strlen(gpaValue[i].name))
             {
-                cout << "[" << j << "] " << gpaValue[i].stno << ": " << gpaValue[i].gpa << "(" << gpaValue[i].name << ")";
+                cout << "[" << j << "] " << gpaValue[i].stno << ": " << gpaValue[i].gpa << " (" << gpaValue[i].name << ")\n";
                 j++;
                }
           }
@@ -70,7 +73,7 @@ void displayStudent(const char operation, const double value){
           {
                if (gpaValue[i].gpa < value && strlen(gpaValue[i].name))
                {
-                      cout << "[" << j << "] " << gpaValue[i].stno << ": " << gpaValue[i].gpa << "(" << gpaValue[i].name << ")";
+                      cout << "[" << j << "] " << gpaValue[i].stno << ": " << gpaValue[i].gpa << " (" << gpaValue[i].name << ")\n";
                       j++;
                }
           }
@@ -79,7 +82,7 @@ void displayStudent(const char operation, const double value){
           {
                if (gpaValue[i].gpa >= value - PRECISION && gpaValue[i].gpa <= value + PRECISION && strlen(gpaValue[i].name))
                {
-                      cout << "[" << j << "] " << gpaValue[i].stno << ": " << gpaValue[i].gpa << "(" << gpaValue[i].name << ")";
+                      cout << "[" << j << "] " << gpaValue[i].stno << ": " << gpaValue[i].gpa << " (" << gpaValue[i].name << ")\n";
                       j++;
                }
           }

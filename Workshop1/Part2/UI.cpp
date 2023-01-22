@@ -22,24 +22,42 @@ piece of work is entirely of my own creation.
 #include "GPAlist.cpp"
  using namespace std;
 
+ void flushkeys();
+
  bool search()
  {
      char name[] = {};
      double gpaNumber = 0;
      char options;
      cout << "Enter GPA query... \n";
-     cout << "? ";
+   
+     int flag = 1;
+
+     while (flag)
+     {
+    cout << "? ";
      cin >> options;
      cin >> gpaNumber;
-
-     if(options == '>' || options =='<' || options =='~' || options == '!'){
-         cout << "calculate\n";
+         if(options == '>' || options =='<' || options =='~' || options == '!'){
+             flushkeys();
+             displayStudent(options, gpaNumber);
      }else{
          cout << "Syntax error: ?  [Op][value]<ENTER> \n";
          cout << "Op: [>,<,~,!]\n";
          cout << "value: GPA value\n";
      };
 
-     displayStudent(options, gpaNumber);
+     if(options == '!' && gpaNumber =='\0'){
+         flag = 0;
+         cout << "good bye";
+         }
+
+
+
+     }
+     
+
+    
+
      return true;
  }

@@ -22,7 +22,8 @@ piece of work is entirely of my own creation.
 bool openFile(const char *filename);
 void closeFile();
 bool readStudentName(char name[]);
-bool readStudentNumber(int num);
-bool readStudentGpa(double gpa);
+bool readStudentNumber(int *num);
+bool readStudentGpa(double *gpa);
+void flushkeys();
 
 #endif // !SDDS_FILEDFF_H
