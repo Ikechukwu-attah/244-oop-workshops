@@ -13,3 +13,19 @@ piece of work is entirely of my own creation.
 
 
  */
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <cstring>
+#include <cstdio>
+#include "UI.h"
+ using namespace std;
+
+ bool search()
+ {
+     char name[] = {};
+     cout << "enter your name \n";
+     cin >> name;
+
+     return true;
+ }

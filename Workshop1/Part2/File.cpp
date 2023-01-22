@@ -25,7 +25,28 @@ using namespace std;
 FILE* fptr;       
 
 // opens the data file and returns true if successful
-bool gpaQuery(const char *filename){
+bool openFile(const char *filename){
     fptr = fopen(filename, "r");
      return fptr != NULL;
+}
+
+
+
+void closeFile() {
+   if (fptr) fclose(fptr);
+}
+
+// read student name from the file
+bool readStudentName(char name[]){
+   return fscanf(fptr, "%[^,],", name)==1;
+}
+
+// read student number from file
+bool readStudentNumber(int *num){
+   return fscanf(fptr, "%d,", num)==1;
+}
+
+// reading student GPA
+bool readStudentGpa(double *gpa){
+   return fscanf(fptr, "%lf\n", gpa)==1;
 }

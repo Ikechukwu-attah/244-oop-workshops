@@ -19,6 +19,10 @@ piece of work is entirely of my own creation.
 
 
 
-bool gpaQuery(const char *filename);
+bool openFile(const char *filename);
+void closeFile();
+bool readStudentName(char name[]);
+bool readStudentNumber(int num);
+bool readStudentGpa(double gpa);
 
-#endif // !SDDS_GPALIST_H
+#endif // !SDDS_FILEDFF_H

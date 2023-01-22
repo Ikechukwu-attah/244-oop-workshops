@@ -19,7 +19,7 @@ piece of work is entirely of my own creation.
 #define SDDS_GPALIST_H
 
  bool gpaQuery(const char *filename);
-
+ bool loadStudent();
 
 #endif // !SDDS_GPALIST_H
 

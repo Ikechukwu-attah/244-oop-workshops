@@ -13,16 +13,31 @@ piece of work is entirely of my own creation.
 
 
  */
-
-
-
-#include <iostream>
 #include "GPAlist.h"
- using namespace std;
+#include "File.h"
+#include "File.cpp"
+#include "GPA.h"
 
  bool gpaQuery(const char *filename){
+      openFile(filename);
+      closeFile();
+      return true;
+ };
 
-    
+ GPA gpaValue[100];
+ bool loadStudent()
+ {
+      GPA gpa;
+      int studentNumber = 0;
+      bool ok = 0;
+      if(openFile("students.csv")){
+        while(ok && studentNumber < 100){
+            ok = readStudentName(gpa.name) && readStudentNumber(&gpa.stno) && readStudentGpa(&gpa.gpa);
 
+            if(ok)
+                gpaValue[studentNumber++] = gpa;
+        }
+         closeFile();
+      }
+      return studentNumber == 100;
  }
-
