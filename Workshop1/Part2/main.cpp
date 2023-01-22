@@ -24,20 +24,21 @@ piece of work is entirely of my own creation.
  using namespace std;
  int main()
  {
-    //  if (gpaQuery("std.csv"))
-    //  {
-    //      cout << "This should have failed!" << std::endl;
-    //  }
-    //  else
-    //  {
-    //      cout << "failed!, this is the correct exectution" << std::endl;
-    //  }
+   //    if (gpaQuery("std.csv"))
+   //    {
+   //        cout << "This should have failed!" << std::endl;
+   //   }
+   //    else
+   //   {
+   //        cout << "failed!, this is the correct exectution" << std::endl;
+   //    }
 
-    //  if (!gpaQuery("students.csv"))
-    //  {
-    //      std::cout << "This should have worked, fix the problem!" << std::endl;
-    //  }
-    //  cout << "Goodbye!" << std::endl;
+   //   if (!gpaQuery("students.csv"))
+   //    {
+   //       std::cout << "This should have worked, fix the problem!" << std::endl;
+   //   }
+     
+      // cout << "Goodbye!" << std::endl;
     search();
     return 0;
  }

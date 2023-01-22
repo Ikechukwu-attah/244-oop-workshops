@@ -19,6 +19,7 @@ piece of work is entirely of my own creation.
 #include <cstring>
 #include <cstdio>
 #include "UI.h"
+#include "GPAlist.cpp"
  using namespace std;
 
  bool search()
@@ -39,5 +40,6 @@ piece of work is entirely of my own creation.
          cout << "value: GPA value\n";
      };
 
+     displayStudent(options, gpaNumber);
      return true;
  }

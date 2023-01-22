@@ -13,6 +13,13 @@ piece of work is entirely of my own creation.
 
 
  */
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <cstring>
+#include <cstdio>
+#define PRECISION 0.05
+
 #include "GPAlist.h"
 #include "File.h"
 #include "File.cpp"
@@ -23,6 +30,7 @@ piece of work is entirely of my own creation.
       closeFile();
       return true;
  };
+
 
  GPA gpaValue[100];
  bool loadStudent()
@@ -41,3 +49,39 @@ piece of work is entirely of my own creation.
       }
       return studentNumber == 100;
  }
+
+
+void displayStudent(const char operation, const double value){
+      int i = 0;
+      int j = 0;
+   
+      for (i = 0; i < 100; i++)
+      {
+         if (operation == '>')
+         {
+            if (gpaValue[i].gpa > value && strlen(gpaValue[i].name))
+            {
+                cout << "[" << j << "] " << gpaValue[i].stno << ": " << gpaValue[i].gpa << "(" << gpaValue[i].name << ")";
+                j++;
+               }
+          }
+          
+          else if (operation == '<')
+          {
+               if (gpaValue[i].gpa < value && strlen(gpaValue[i].name))
+               {
+                      cout << "[" << j << "] " << gpaValue[i].stno << ": " << gpaValue[i].gpa << "(" << gpaValue[i].name << ")";
+                      j++;
+               }
+          }
+        
+          else if (operation == '~')
+          {
+               if (gpaValue[i].gpa >= value - PRECISION && gpaValue[i].gpa <= value + PRECISION && strlen(gpaValue[i].name))
+               {
+                      cout << "[" << j << "] " << gpaValue[i].stno << ": " << gpaValue[i].gpa << "(" << gpaValue[i].name << ")";
+                      j++;
+               }
+          }
+      }
+}

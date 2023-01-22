@@ -20,6 +20,7 @@ piece of work is entirely of my own creation.
 
  bool gpaQuery(const char *filename);
  bool loadStudent();
+ void displayStudent(const char operation, const double value);
 
 #endif // !SDDS_GPALIST_H
 
