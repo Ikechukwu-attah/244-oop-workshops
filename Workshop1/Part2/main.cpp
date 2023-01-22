@@ -19,23 +19,25 @@ piece of work is entirely of my own creation.
 // #include "GPAlist.h"
 // #include "File.h"
 // #include "File.cpp"
+#include "UI.cpp"
 #include "GPAlist.cpp"
  using namespace std;
  int main()
  {
-     if (gpaQuery("std.csv"))
-     {
-         cout << "This should have failed!" << std::endl;
-     }
-     else
-     {
-         cout << "failed!, this is the correct exectution" << std::endl;
-     }
+    //  if (gpaQuery("std.csv"))
+    //  {
+    //      cout << "This should have failed!" << std::endl;
+    //  }
+    //  else
+    //  {
+    //      cout << "failed!, this is the correct exectution" << std::endl;
+    //  }
 
-     if (!gpaQuery("students.csv"))
-     {
-         std::cout << "This should have worked, fix the problem!" << std::endl;
-     }
-     cout << "Goodbye!" << std::endl;
-     return 0;
+    //  if (!gpaQuery("students.csv"))
+    //  {
+    //      std::cout << "This should have worked, fix the problem!" << std::endl;
+    //  }
+    //  cout << "Goodbye!" << std::endl;
+    search();
+    return 0;
  }

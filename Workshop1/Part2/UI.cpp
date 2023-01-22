@@ -24,8 +24,14 @@ piece of work is entirely of my own creation.
  bool search()
  {
      char name[] = {};
-     cout << "enter your name \n";
-     cin >> name;
+     double gpaNumber = 0;
+     char options;
+     cout << "Enter GPA query... \n";
+     cout << "? ";
+     cin >> gpaNumber;
+     
+     
+     
 
      return true;
  }
