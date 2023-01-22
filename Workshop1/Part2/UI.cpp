@@ -28,10 +28,16 @@ piece of work is entirely of my own creation.
      char options;
      cout << "Enter GPA query... \n";
      cout << "? ";
+     cin >> options;
      cin >> gpaNumber;
-     
-     
-     
+
+     if(options == '>' || options =='<' || options =='~' || options == '!'){
+         cout << "calculate\n";
+     }else{
+         cout << "Syntax error: ?  [Op][value]<ENTER> \n";
+         cout << "Op: [>,<,~,!]\n";
+         cout << "value: GPA value\n";
+     };
 
      return true;
  }
