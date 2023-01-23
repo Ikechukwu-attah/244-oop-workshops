@@ -17,10 +17,12 @@ piece of work is entirely of my own creation.
 
 #ifndef SDDS_GPALIST_H
 #define SDDS_GPALIST_H
-
- bool gpaQuery(const char *filename);
+namespace ssd{
+     bool gpaQuery(const char *filename);
  bool loadStudent();
  void displayStudent(const char operation, const double value);
+
+}
 
 #endif // !SDDS_GPALIST_H
 

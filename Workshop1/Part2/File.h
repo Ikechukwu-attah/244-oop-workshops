@@ -17,13 +17,17 @@ piece of work is entirely of my own creation.
 #ifndef SDDS_FILE_H
 #define SDDS_FILE_H
 
-
-
-bool openFile(const char *filename);
+namespace ssd
+{
+    bool openFile(const char *filename);
 void closeFile();
 bool readStudentName(char name[]);
 bool readStudentNumber(int *num);
 bool readStudentGpa(double *gpa);
 void flushkeys();
+} 
+
+
+
 
 #endif // !SDDS_FILEDFF_H

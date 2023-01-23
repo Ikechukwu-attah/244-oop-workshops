@@ -4,7 +4,7 @@
 Full Name : ATTAH IKECHUKWU ANTHONY
 Student ID#: 175441211
 Email : iattah@myseneca.ca
-Section : PART-2
+Section : NFF
 Authenticity Declaration:
 I declare this submission is the result of my own work and has not been
 shared with any other student or 3rd party content provider. This submitted
@@ -18,12 +18,15 @@ piece of work is entirely of my own creation.
 #include <iostream>
 #include <cstring>
 #include <cstdio>
+#include <iomanip>
 #define PRECISION 0.05
+#define ADDZERO 0.00001
 
 #include "GPAlist.h"
 #include "File.h"
 #include "File.cpp"
 #include "GPA.h"
+ namespace ssd{
 
  bool gpaQuery(const char *filename){
       openFile(filename);
@@ -56,7 +59,7 @@ piece of work is entirely of my own creation.
 
 void displayStudent(const char operation, const double value){
       int i = 0;
-      int j = 0;
+      int j = 1;
    
       for (i = 0; i < 100; i++)
       {
@@ -64,7 +67,7 @@ void displayStudent(const char operation, const double value){
          {
             if (gpaValue[i].gpa > value && strlen(gpaValue[i].name))
             {
-                cout << "[" << j << "] " << gpaValue[i].stno << ": " << gpaValue[i].gpa << " (" << gpaValue[i].name << ")\n";
+                cout << "[" << j << "] " << gpaValue[i].stno  << ": " << fixed << setprecision(1)<< gpaValue[i].gpa+ADDZERO << " (" << gpaValue[i].name << ")\n";
                 j++;
                }
           }
@@ -73,7 +76,7 @@ void displayStudent(const char operation, const double value){
           {
                if (gpaValue[i].gpa < value && strlen(gpaValue[i].name))
                {
-                      cout << "[" << j << "] " << gpaValue[i].stno << ": " << gpaValue[i].gpa << " (" << gpaValue[i].name << ")\n";
+                      cout << "[" << j << "] " << gpaValue[i].stno << ": " << fixed << setprecision(1) << gpaValue[i].gpa+ ADDZERO << " (" << gpaValue[i].name << ")\n";
                       j++;
                }
           }
@@ -82,9 +85,16 @@ void displayStudent(const char operation, const double value){
           {
                if (gpaValue[i].gpa >= value - PRECISION && gpaValue[i].gpa <= value + PRECISION && strlen(gpaValue[i].name))
                {
-                      cout << "[" << j << "] " << gpaValue[i].stno << ": " << gpaValue[i].gpa << " (" << gpaValue[i].name << ")\n";
+                      cout << "[" << j << "] " << gpaValue[i].stno << ": " << fixed << setprecision(1) << gpaValue[i].gpa + ADDZERO << " (" << gpaValue[i].name << ")\n";
                       j++;
                }
           }
+
+          // else if (operation == '!' && value == 0)
+          // {
+          //      exit(0);
+          // }
       }
+}
+
 }

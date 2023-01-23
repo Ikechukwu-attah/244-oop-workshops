@@ -17,8 +17,11 @@ piece of work is entirely of my own creation.
 
 #ifndef SDDS_UI_H
 #define SDDS_UI_H
-
- bool search();
+namespace ssd{
+    bool search();
+bool yes();
+}
+ 
  
 
 #endif
