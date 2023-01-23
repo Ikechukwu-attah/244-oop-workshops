@@ -16,10 +16,10 @@ piece of work is entirely of my own creation.
  */
 
 #include <iostream>
-// #include "GPAlist.h"
+#include "GPAlist.h"
 // #include "File.h"
 // #include "File.cpp"
-#include "UI.cpp"
+#include "UI.h"
 
  using namespace std;
  using namespace ssd;
