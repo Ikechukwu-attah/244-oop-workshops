@@ -24,8 +24,10 @@ piece of work is entirely of my own creation.
 
 #include "GPAlist.h"
 #include "File.h"
-#include "File.cpp"
+// #include "File.cpp"
 #include "GPA.h"
+using namespace std;
+
  namespace ssd{
 
  bool gpaQuery(const char *filename){

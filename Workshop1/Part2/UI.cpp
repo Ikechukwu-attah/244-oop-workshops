@@ -19,7 +19,9 @@ piece of work is entirely of my own creation.
 #include <cstring>
 #include <cstdio>
 #include "UI.h"
-#include "GPAlist.cpp"
+#include "GPAlist.h"
+#include "File.h"
+// #include "GPAlist.cpp"
  using namespace std;
 
 namespace ssd{
@@ -40,7 +42,8 @@ namespace ssd{
                   cout << "Exit the program? (Y)es/(N)o: ";
                  flag = !yes();
                  cout << endl;
-         }
+                 cout << "Goodbye!";
+      }
      cin >> gpaNumber;
          if(options == '>' || options =='<' || options =='~' || options == '!'){
             //  flushkeys();

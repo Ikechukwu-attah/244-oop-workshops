@@ -1,0 +1,6 @@
+
+
+1. One of the thing i learnt sofar is file handling,which i understood as module. This project exposed me in learning how files interact with each other which makes the code easy and simple to read. 
+  Secondly, i was able to understand how to read files and extract data from files. I came to realise how to open files and close it as well using inbuilt library. I also learnt how to use setprecision to round to any decimal places that i want which makes it easier for me to deal with decimal values or numbers. 
+  I still understand the important of using namespace to wrap all the code, which protect or prevent duplicate files that is included in a particular file. 
+  I still learnt how  header files works and how to protect it as well using  #ifndef,#define and  #endif .

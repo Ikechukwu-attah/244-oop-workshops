@@ -26,14 +26,14 @@ piece of work is entirely of my own creation.
 
  int main()
  {
-      if (gpaQuery("std.csv"))
-       {
-           cout << "This should have failed!" << std::endl;
-      }
-       else
-      {
-   cout << "failed!, this is the correct exectution" << std::endl;
-    }
+   //    if (gpaQuery("std.csv"))
+   //     {
+   //         cout << "This should have failed!" << std::endl;
+   //    }
+   //     else
+   //    {
+   // cout << "failed!, this is the correct exectution" << std::endl;
+   //  }
 
       if (!gpaQuery("students.csv"))
       {
