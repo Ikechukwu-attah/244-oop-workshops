@@ -22,7 +22,7 @@ piece of work is entirely of my own creation.
 
 using namespace std;
 
-namespace ssd{
+namespace sdds{
    
    FILE* fptr;       
 

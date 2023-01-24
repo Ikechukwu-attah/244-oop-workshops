@@ -23,7 +23,7 @@ piece of work is entirely of my own creation.
 using namespace std;
 using namespace ssd;
 
-void flushkeys();
+
 bool yes();
 
 int main() {

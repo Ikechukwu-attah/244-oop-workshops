@@ -17,7 +17,7 @@ piece of work is entirely of my own creation.
 #ifndef SDDS_FILE_H
 #define SDDS_FILE_H
 
-namespace ssd
+namespace sdds
 {
     bool openFile(const char *filename);
 void closeFile();

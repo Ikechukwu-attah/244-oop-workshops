@@ -20,7 +20,7 @@ piece of work is entirely of my own creation.
 #include "UI.h"
 
  using namespace std;
- using namespace ssd;
+ using namespace sdds;
 
  int main()
  {

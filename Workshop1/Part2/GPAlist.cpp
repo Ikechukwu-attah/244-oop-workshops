@@ -28,7 +28,7 @@ piece of work is entirely of my own creation.
 #include "GPA.h"
 using namespace std;
 
- namespace ssd{
+ namespace sdds{
 
  bool gpaQuery(const char *filename){
       openFile(filename);
@@ -92,10 +92,7 @@ void displayStudent(const char operation, const double value){
                }
           }
 
-          // else if (operation == '!' && value == 0)
-          // {
-          //      exit(0);
-          // }
+         
       }
 }
 

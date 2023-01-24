@@ -24,7 +24,7 @@ piece of work is entirely of my own creation.
 // #include "GPAlist.cpp"
  using namespace std;
 
-namespace ssd{
+namespace sdds{
      bool search()
  {
      

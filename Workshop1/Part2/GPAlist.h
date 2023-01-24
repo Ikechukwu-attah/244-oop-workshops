@@ -17,7 +17,7 @@ piece of work is entirely of my own creation.
 
 #ifndef SDDS_GPALIST_H
 #define SDDS_GPALIST_H
-namespace ssd{
+namespace sdds{
  bool gpaQuery(const char *filename);
  bool loadStudent();
  void displayStudent(const char operation, const double value);

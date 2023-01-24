@@ -17,7 +17,7 @@ piece of work is entirely of my own creation.
 
 #ifndef SDDS_UI_H
 #define SDDS_UI_H
-namespace ssd{
+namespace sdds{
     bool search();
 bool yes();
 }
