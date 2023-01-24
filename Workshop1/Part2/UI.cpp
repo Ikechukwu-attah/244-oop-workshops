@@ -27,7 +27,7 @@ piece of work is entirely of my own creation.
 namespace ssd{
      bool search()
  {
-     char name[] = {};
+     
      double gpaNumber = 0;
      char options;
      cout << "Enter GPA query... \n";
@@ -41,8 +41,8 @@ namespace ssd{
       if(options == '!'){
                   cout << "Exit the program? (Y)es/(N)o: ";
                  flag = !yes();
-                 cout << endl;
-                 cout << "Goodbye!";
+                
+                
       }
      cin >> gpaNumber;
          if(options == '>' || options =='<' || options =='~' || options == '!'){
