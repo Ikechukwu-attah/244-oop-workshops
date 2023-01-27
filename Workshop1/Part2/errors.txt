@@ -1,23 +1,4 @@
-main_prof.cpp:17:17: error: ‘sdds’ is not a namespace-name
- using namespace sdds;
-                 ^
-main_prof.cpp:17:21: error: expected namespace-name before ‘;’ token
- using namespace sdds;
-                     ^
-main_prof.cpp: In function ‘int main()’:
-main_prof.cpp:19:23: error: ‘gpaQuery’ was not declared in this scope
-  if(gpaQuery("std.csv")) {
+GPAlist.cpp: In function ‘bool sdds::loadStudent()’:
+GPAlist.cpp:63:23: error: ‘sortStudent’ was not declared in this scope
+           sortStudent();
                        ^
-main_prof.cpp:19:23: note: suggested alternative:
-In file included from main_prof.cpp:16:0:
-GPAlist.h:21:11: note:   ‘ssd::gpaQuery’
-      bool gpaQuery(const char *filename);
-           ^
-main_prof.cpp:24:29: error: ‘gpaQuery’ was not declared in this scope
-  if(!gpaQuery("students.csv")) {
-                             ^
-main_prof.cpp:24:29: note: suggested alternative:
-In file included from main_prof.cpp:16:0:
-GPAlist.h:21:11: note:   ‘ssd::gpaQuery’
-      bool gpaQuery(const char *filename);
-           ^

@@ -12,7 +12,8 @@ int main()
     cout << "Please enter two numbers";
     cin >> num1 >> num2;
 
-    swap(&num1, &num2);
+    std::swap(num1, num2);
+    // swap(&num1, &num2);
 
     cout << "The numbers after swap are :" << num1 << "and" << num2;
 }

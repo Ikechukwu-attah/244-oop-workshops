@@ -19,7 +19,7 @@ piece of work is entirely of my own creation.
 #define SDDS_UI_H
 namespace sdds{
     bool search();
-bool yes();
+// bool yes();
 }
  
  

@@ -24,18 +24,26 @@ piece of work is entirely of my own creation.
 
 #include "GPAlist.h"
 #include "File.h"
-// #include "File.cpp"
+#include "UI.h"
 #include "GPA.h"
 using namespace std;
 
  namespace sdds{
 
- bool gpaQuery(const char *filename){
-      openFile(filename);
-      closeFile();
+bool gpaQuery(const char* filename){
+      if (!openFile(filename))
+        {
+            return false;
+        }
+      cout << "Enter GPA query...\n";
+
+         loadStudent();
+ 
+           search();
+          //  closeFile();
+
       return true;
  };
-
 
  GPA gpaValue[100];
  bool loadStudent()
@@ -53,6 +61,7 @@ using namespace std;
                  gpaValue[studentNumber++] = gpa;
         }
          closeFile();
+          sortStudent();
       }
       
       return studentNumber == 100;
@@ -95,5 +104,36 @@ void displayStudent(const char operation, const double value){
          
       }
 }
+
+
+
+ void sortStudent(){
+ GPA temp_list[100];
+     for (int y = 0; y < 100; y++)
+        {
+            for (int z = y + 1; z < 100; z++)
+            {
+                if (gpaValue[y].stno > gpaValue[z].stno)
+                {
+                    strcpy(temp_list[y].name, gpaValue[y].name);
+                    temp_list[y].gpa = gpaValue[y].gpa;
+                    temp_list[y].stno = gpaValue[y].stno;
+
+                    strcpy(gpaValue[y].name, gpaValue[z].name);
+                    gpaValue[y].gpa = gpaValue[z].gpa;
+                    gpaValue[y].stno = gpaValue[z].stno;
+
+                    strcpy(gpaValue[z].name, temp_list[y].name);
+                    gpaValue[z].gpa = temp_list[y].gpa;
+                    gpaValue[z].stno = temp_list[y].stno;
+                }
+            }
+        }
+          
+        }
+
+
+
+
 
 }

@@ -21,6 +21,7 @@ namespace sdds{
  bool gpaQuery(const char *filename);
  bool loadStudent();
  void displayStudent(const char operation, const double value);
+  void sortStudent();
 
 }
 

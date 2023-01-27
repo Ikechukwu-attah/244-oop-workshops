@@ -25,28 +25,37 @@ piece of work is entirely of my own creation.
  using namespace std;
 
 namespace sdds{
-     bool search()
+ 
+      bool search()
  {
      
      double gpaNumber = 0;
      char options;
-     cout << "Enter GPA query... \n";
    
+    
      int flag = false;
+     char answer;
 
      while (!flag)
      {
     cout << "? ";
-     cin >> options;
+    cin >> options;
       if(options == '!'){
+                  flag = true;
                   cout << "Exit the program? (Y)es/(N)o: ";
-                 flag = !yes();
-                
-                
-      }
+                  cin >> answer ;
+                  if(answer == 'Y' || answer == 'y'){
+                    //   cout << "Goodbye!";
+                      return 0;
+                  }else{
+                      flag = true;
+                  }
+
+                  //  cout << endl;
+         }
      cin >> gpaNumber;
          if(options == '>' || options =='<' || options =='~' || options == '!'){
-            //  flushkeys();
+            
              displayStudent(options, gpaNumber);
            
 
@@ -55,31 +64,21 @@ namespace sdds{
              
          else
          {
-             cout << "Syntax error: ?  [Op][value]<ENTER> \n";
+             cout << "Syntax error: ? [Op][value]<ENTER>\n";
              cout << "Op: [>,<,~,!]\n";
-             cout << "value: GPA value\n";
+             cout << "value: GPA value\n\n";
          };
 
 
- 
+//   loadStudent();
 
+        
      }
     
 
      return true;
  }
 
-
- bool yes() {
-   char ch = cin.get();
-//    flushkeys();
-
-   if(ch == 'y'|| ch=='Y'){
-         flushkeys();
-      
-         return 0;
-   }
-   return ch == 'y' || ch == 'Y';
-}
+ 
 }
 

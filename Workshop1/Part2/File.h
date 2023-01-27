@@ -19,7 +19,7 @@ piece of work is entirely of my own creation.
 
 namespace sdds
 {
-    bool openFile(const char *filename);
+    bool openFile(const char filename[]);
 void closeFile();
 bool readStudentName(char name[]);
 bool readStudentNumber(int *num);
