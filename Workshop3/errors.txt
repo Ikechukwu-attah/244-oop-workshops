@@ -1,0 +1,4 @@
+Department.cpp: In member function ‘void sdds::Department::updateName(const char*)’:
+Department.cpp:37:49: warning: NULL used in arithmetic [-Wpointer-arith]
+         if (newname != nullptr && newname[0] != NULL)
+                                                 ^
