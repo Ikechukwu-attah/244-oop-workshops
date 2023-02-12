@@ -17,6 +17,8 @@
 #include<cstring>
 #include"Store.h"
 #include"Store.cpp"
+// #include"Toys.cpp"
+
 using namespace std;
 using namespace sdds;
 

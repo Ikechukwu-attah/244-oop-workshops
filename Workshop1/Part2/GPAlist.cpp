@@ -40,7 +40,7 @@ bool gpaQuery(const char* filename){
          loadStudent();
  
            search();
-          //  closeFile();
+           closeFile();
 
       return true;
  };

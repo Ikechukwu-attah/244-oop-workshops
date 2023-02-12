@@ -24,19 +24,25 @@ namespace sdds {
     // To Do: read functions (4 overloaded read functions)
     
     
-    int read(char* Package_Name) {
-        return fscanf(fp, "%60[^\n]\n", Package_Name)==1;
+    int read(char Package_Name[61]) {
+        char p_name[61];
+        if(fscanf(fp, "%60[^\n]\n", Package_Name) == 1){
+            
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+    int read(int& idTime ) {
+
+        return fscanf(fp, "%d,",idTime )==1;
         
     }
-    int read(int nums ) {
-        return fscanf(fp, "%d,",nums )==1;
-        
-    }
-    int read(double timeinhours) {
+    int read(double& timeinhours) {
         return fscanf(fp, "%lf,", timeinhours)==1;
         
     }
-    int read(char dayofweek) {
+    int read(char& dayofweek) {
         return fscanf(fp, "%[^ \t\n\r\v\f,]%*c", dayofweek) == 1;
     }
 
@@ -55,4 +61,5 @@ namespace sdds {
         while (str[++i]);
         return i;
     }
+
 }

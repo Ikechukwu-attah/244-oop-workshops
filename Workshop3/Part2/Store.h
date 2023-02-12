@@ -11,6 +11,7 @@ namespace sdds
 {
 
     class Store{
+        public:
         char m_sName[MAX_SNAME];
         int m_noOfToys;
         int m_addToys;
@@ -21,9 +22,14 @@ namespace sdds
         void setToys(const char* tname, int sku, double price,int age);
         void display()const;
 
-
-
+        void find(int sku);
+        void setEmpty();
 };
+
+
+
+
+
 
 }
 

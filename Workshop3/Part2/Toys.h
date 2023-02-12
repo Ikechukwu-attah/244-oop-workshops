@@ -14,6 +14,14 @@ namespace sdds
      double m_price;
      int m_age;
      bool m_onSale;
+
+     void calSale();
+     void addToys(const char* tname, int sku, double price,int age);
+     void isSale(bool sale);
+
+    void display()const;
+
+    void setEmpty();
  };
 };
 
