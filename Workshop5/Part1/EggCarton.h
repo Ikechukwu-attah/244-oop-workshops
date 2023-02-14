@@ -35,6 +35,10 @@
 
    EggCarton& operator++();
 
+// PostFix
+   EggCarton operator--(int);
+
+   EggCarton operator++(int);
 
     };
 }

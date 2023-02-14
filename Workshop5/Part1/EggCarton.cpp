@@ -103,4 +103,40 @@ EggCarton& EggCarton::operator--() {
 }
 
 
+EggCarton& EggCarton::operator++() {
+    if (noOfEggs < size) {
+        noOfEggs++;
+        if (noOfEggs > size) setBroken();
+    } else {
+        setBroken();
+    }
+    return *this;
+}
+
+EggCarton EggCarton::operator--(int) {
+  EggCarton temp = *this;
+  --(*this);
+  return temp;
+}
+
+
+EggCarton EggCarton::operator++(int) {
+    EggCarton temp(*this);
+    ++(*this);
+    return temp;
+}
+
+
+EggCarton& EggCarton::operator=(int value) {
+    if(value < 0 || value > size) {
+        setBroken();
+    }
+    else {
+        noOfEggs = value;
+    }
+    return *this;
+}
+
+
+
 }
