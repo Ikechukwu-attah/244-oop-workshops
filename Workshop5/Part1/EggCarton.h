@@ -40,6 +40,11 @@
 
    EggCarton operator++(int);
 
+   EggCarton &operator=(int value);
+
+   EggCarton &operator+=(int value);
+
+   EggCarton &operator+=(EggCarton &right);
     };
 }
 

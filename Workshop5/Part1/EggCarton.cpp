@@ -138,5 +138,35 @@ EggCarton& EggCarton::operator=(int value) {
 }
 
 
+EggCarton& EggCarton::operator+=(int value) {
+    if (*this && value >= 0) {  
+        int totalEggs = noOfEggs + value;
+        if (totalEggs > size) {  
+            setBroken();
+        }
+        else {
+            noOfEggs = totalEggs;
+        }
+    }
+    return *this;
+}
+
+
+EggCarton& EggCarton::operator+=(EggCarton& right) {
+    int totalEggs = noOfEggs + right.noOfEggs;
+    if (totalEggs > size) {
+        setBroken();
+        return *this;
+    }
+    noOfEggs = totalEggs;
+    right.noOfEggs = (totalEggs - size) > 0 ? (totalEggs - size) : 0;
+    return *this;
+};
+
+
+bool EggCarton::operator==(const EggCarton& right) const {
+    double weightDiff = size * noOfEggs - right.size * right.noOfEggs;
+    return weightDiff > -0.001 && weightDiff < 0.001;
+}
 
 }
