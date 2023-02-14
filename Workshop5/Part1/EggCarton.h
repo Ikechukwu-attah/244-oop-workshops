@@ -17,10 +17,24 @@
 
     void setBroken();
 
+     operator bool() const;
+
 
     std::ostream& display(std::ostream& ostr = std::cout) const;
 
     std::ostream& displayCarton(int size, int noOfEggs, bool jumbo, std::ostream& ostr) const;
+
+    istream &read(istream &istr = cin);
+
+
+   operator int() const;
+
+   operator double() const;
+
+   EggCarton& operator--();
+
+   EggCarton& operator++();
+
 
     };
 }

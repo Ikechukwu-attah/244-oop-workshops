@@ -76,4 +76,31 @@ istream& EggCarton::read(istream& istr) {
 
 
 
+
+EggCarton::operator int() const {
+    if (*this) {
+        return noOfEggs;
+    } else {
+        return -1;
+    }
+}
+
+
+EggCarton::operator double() const {
+    if (!*this) {
+        return -1.0;
+    }
+
+    int totalWeight = (jumboSize) ? (noOfEggs * JumboEggWeight) : (noOfEggs * RegularEggWeight);
+    return static_cast<double>(totalWeight) / 1000.0;
+}
+
+EggCarton& EggCarton::operator--() {
+  if (*this && noOfEggs > 0) {
+    noOfEggs--;
+  }
+  return *this;
+}
+
+
 }
