@@ -2,8 +2,17 @@
 using namespace std;
 
 
+class Shape{
+    int width;
+    int height;
 
-int main(){
+    public:
+        friend class Geometry;
+}
+
+int
+main()
+{
 
     return 0;
 }
